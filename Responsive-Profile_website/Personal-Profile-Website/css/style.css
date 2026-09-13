@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/*  Header */
+
+.head {
+  width: 100%;
+  padding: 15px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #e2e8f0;
+}
+/* Logo*/
+.head .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.head .logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Navbar */
+
+.head nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.head nav a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+nav i {
+  font-size: 20px;
+}
+
+nav span {
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  transition: 0.3s ease;
+}
+
+nav a:hover span {
+  max-width: 70px;
+  opacity: 1;
+}
+
+nav a:hover {
+  color: #6366f1;
+}
+
+/*  Hero */
+
+.hero {
+  height: 500px;
+  padding: 90px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero p:first-child {
+  max-width: 750px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+.hero p:nth-child(2) {
+  color: #6366f1;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.hero h3 {
+  font-size: 28px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+/* Skills */
+
+.hero ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hero li {
+  padding: 9px 18px;
+  background: #ffffff;
+  color: #6366f1;
+  border: 1px solid #c7d2fe;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero li:hover {
+  background: #6366f1;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Skills Table */
+
+.skill {
+  padding: 80px 8%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background: #ffffff;
+}
+
+.skill table {
+  width: 80%;
+  max-width: 850px;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.skill th,
+.skill td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.skill th {
+  background: #6366f1;
+  color: #ffffff;
+}
+
+.skill tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Footer  */
+
+.foot {
+  padding: 70px 8%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background: #304972;
+}
+
+.foot form {
+  width: 100%;
+  max-width: 600px;
+  padding: 35px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  background: #ffffff;
+  border-radius: 15px;
+}
+
+.foot form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.foot label {
+  margin-bottom: 7px;
+  color: #304972;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.foot input,
+.foot textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.foot textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.foot input :focus,
+.foot textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.foot input[type="submit"] {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.foot input[type="submit"]:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+/* Tablet*/
+
+@media (max-width: 768px) {
+  .head {
+    padding: 15px 5%;
+  }
+
+  .head .logo h1 {
+    font-size: 18px;
+  }
+
+  .head nav {
+    gap: 18px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 70px 5%;
+  }
+
+  .hero p:first-child {
+    font-size: 21px;
+  }
+
+  .skill {
+    padding: 60px 5%;
+  }
+
+  .skill table {
+    width: 100%;
+  }
+
+  .foot {
+    padding: 60px 5%;
+  }
+}
+
+/* Mobile*/
+@media (max-width: 550px) {
+  .head {
+    padding: 12px 5%;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .logo {
+    justify-content: center;
+  }
+  .logo img {
+    width: 48px;
+    height: 48px;
+  }
+  .logo h1 {
+    font-size: 16px;
+  }
+  nav {
+    width: 100%;
+    justify-content: center;
+    gap: 25px;
+  }
+  nav a {
+    font-size: 14px;
+  } 
+  /* Hero */
+  .hero {
+    padding: 60px 5%;
+  }
+  .hero p:first-child {
+    font-size: 19px;
+  }
+  .hero p:nth-child(2) {
+    font-size: 15px;
+  }
+  .hero h3 {
+    font-size: 23px;
+  }
+  .hero ul {
+    gap: 8px;
+  }
+  .hero li {
+    padding: 8px 13px;
+    font-size: 13px;
+  } /* Table */
+  .skill {
+    padding: 50px 3%;
+  }
+  .skill table {
+    width: 100%;
+    font-size: 13px;
+  }
+  .skill th,
+  .skill td {
+    padding: 10px 5px;
+  } /* Form */
+  .foot {
+    padding: 50px 5%;
+  }
+  .foot form {
+    padding: 25px 20px;
+  }
+}
